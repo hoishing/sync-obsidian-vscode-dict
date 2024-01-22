@@ -1,24 +1,22 @@
 # Sync Spell Checking Dictionary Between Obsidian and VSCode
 
-As a heavy user of both VSCode and Obsidian, keeping the spell checking dictionary in sync between two apps is essential to avoid duplicated effort of adding the same word in both apps.
+As someone who frequently uses both VSCode and Obsidian, I find it crucial to synchronize the spell checking dictionaries of both applications. This avoids the redundant task of adding the same word to each app's dictionary.
 
-I originally think its just a simple task by symbolic linking two dictionary files, as both are pure text with one word per line.
+Initially, I assumed that linking the dictionary files of both apps would be straightforward, given that they are text files containing one word per line. However, I discovered that Obsidian's built-in spell checker has specific criteria for its dictionary file:
 
-Later I found that Obsidian built-in spell checker has some specific requirements for its dictionary file:
+- The words must be arranged in alphabetical order.
+- Words in uppercase should be listed before lowercase ones.
+- The final line should be a checksum of all the words.
 
-- it need to be sorted alphabetically
-- upper case words come first
-- last line must be a checksum of all words
+Failing to adhere to these requirements results in Obsidian's spell checker malfunctioning. To address this, I devised a solution using watchman and python. The process is as follows:
 
-If we don't follow these rules the spell checker in Obsidian won't work, so I come up with a `watchman` + `python`  solution to tackle the problem. Logic as follow:
-
-- watch both Obsidian and VSCode spell checking dictionary file with `watchman`
-- trigger a python script(`sync-dict.py`) to create dictionary file of the other app when one of the dict file is modified.
-- the python script will exit if both dictionaries entries are the same, avoid infinite trigger
+- Use watchman to monitor the spell checking dictionary files in both Obsidian and VSCode.
+- When a modification is detected in one of the dictionary files, trigger a python script ([sync-dict.py]) that generates the dictionary file for the other application.
+- The python script terminates if it finds that the entries in both dictionaries are identical, preventing an endless loop of triggers.
 
 ## watchman setup
 
-First we need to create trigger config file for both the vscode and obsidian dictionary folder.
+First we need to create trigger config files for both vscode and obsidian dictionary folder.
 
 - Obsidian trigger config
 
@@ -74,3 +72,5 @@ watchman -j < /path/to/vscode/trigger/config
 Note that macOS may ask for folder access permission on the first run, also watchman will add a login item for starting the watch daemon during login.
 
 After that all set, adding word in Obsidian will trigger the update of VSCode dict, and vice versa 🎉
+
+[sync-dict.py]: https://github.com/hoishing/sync-obsidian-vscode-dict/blob/main/sync-dict.py

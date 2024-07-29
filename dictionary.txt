@@ -4,6 +4,7 @@ Pipable
 Railay
 Redmi
 Scrapy
+Searchbar
 Starlink
 TOTP
 TWRP
@@ -16,6 +17,7 @@ applescript
 behaviour
 bg
 binance
+bitly
 bitwarden
 blazingly
 cangjie
@@ -75,12 +77,15 @@ scenius
 shadcn
 shing
 sideload
+stlite
 streamlit
 sveltekit
+svg
 tailwindcss
 tw
 uid
 underfit
 venv
+wasm
 webp
 xcode

@@ -1,9 +1,9 @@
 [
   "trigger",
-  "/Users/shing/Library/Application Support/obsidian",
+  "/Users/kng/Library/Application Support/obsidian",
   {
     "name": "sync-to-code",
     "expression": ["pcre", ".*Dictionary\\.txt$"],
-    "command": ["/Users/shing/google/settings/watchman/sync-dict.py", "to_code"]
+    "command": ["/Users/kng/Documents/settings/watchman/sync-dict.py", "to_code"]
   }
 ]

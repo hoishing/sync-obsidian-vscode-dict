@@ -6,10 +6,8 @@ usage: python3 sync-dict.py to-code|to-obsidian
 
 import hashlib, sys
 
-CODE_DICT = "/Users/shing/google/settings/watchman/dictionary.txt"
-OBSIDIAN_DICT = (
-    "/Users/shing/Library/Application Support/obsidian/Custom Dictionary.txt"
-)
+CODE_DICT = "/Users/kng/Documents/settings/watchman/dictionary.txt"
+OBSIDIAN_DICT = "/Users/kng/Library/Application Support/obsidian/Custom Dictionary.txt"
 
 
 def is_identical() -> bool:

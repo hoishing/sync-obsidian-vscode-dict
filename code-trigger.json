@@ -1,11 +1,11 @@
 [
   "trigger",
-  "/Users/shing/google/settings/watchman",
+  "/Users/kng/Documents/settings/watchman",
   {
     "name": "sync-to-obsidian",
     "expression": ["pcre", ".*dictionary\\.txt$"],
     "command": [
-      "/Users/shing/google/settings/watchman/sync-dict.py",
+      "/Users/kng/Documents/settings/watchman/sync-dict.py",
       "to_obsidian"
     ]
   }

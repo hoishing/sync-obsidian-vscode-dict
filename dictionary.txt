@@ -13,6 +13,7 @@ Tauri
 Unocss
 Xiaomi
 Zettelkasten
+ajax
 algo
 applescript
 aspectable
@@ -87,6 +88,7 @@ raycast
 recog
 restic
 scenius
+sdk
 shadcn
 shing
 sideload

@@ -41,6 +41,7 @@ gogoro
 gpt
 gradio
 gradle
+Groq
 gspread
 hoishing
 htmx
@@ -49,6 +50,7 @@ iconify
 img
 intellisense
 ipynb
+isort
 js
 keras
 konsta

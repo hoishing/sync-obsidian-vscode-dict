@@ -29,6 +29,8 @@ Obsidian's built-in spell checker has special requirement for its dictionary fil
 
 ## How
 
+- add a custom dictionary for cspell vscode extension, save as `dictionary.txt`
+- locate the obsidian dictionary, in `~/Library/Application Support/obsidian/Custom Dictionary.txt`
 - put `sync2obsidian.plist` in `~/Library/LaunchAgents` to add a login service for files monitoring
 - `chmod 666` to both dictionary files
 - `chmod +x sync_dict.py`

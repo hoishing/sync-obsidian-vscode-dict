@@ -30,6 +30,7 @@ bitwarden
 blazingly
 cangjie
 claude
+cloudflare
 colab
 daisyui
 destin
@@ -38,6 +39,7 @@ docstring
 docstrings
 doctest
 drm
+duckdb
 ecdict
 eng
 epub
@@ -92,6 +94,7 @@ pomodoro
 prefs
 proj
 ptag
+py
 pydantic
 pypi
 pytest

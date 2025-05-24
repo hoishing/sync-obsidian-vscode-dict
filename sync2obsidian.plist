@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- A unique identifier for your agent -->
+        <key>Label</key>
+        <string>com.kng.sync2obsidian</string>
+
+        <!-- The command to run: invoke your script in “to_obsidian” mode -->
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Users/kng/Documents/settings/sync_dict/sync_dict.py</string>
+        </array>
+
+        <!-- Watch for ANY change to this one file -->
+        <key>WatchPaths</key>
+        <array>
+            <string>/Users/kng/Documents/settings/sync_dict/dictionary.txt</string>
+            <string>/Users/kng/Library/Application Support/obsidian/Custom Dictionary.txt</string>
+        </array>
+
+        <!-- Logging (optional) -->
+        <!-- <key>StandardOutPath</key>
+        <string>/Users/kng/Documents/settings/sync_dict/sync2obsidian.out.log</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/kng/Documents/settings/sync_dict/sync2obsidian.err.log</string> -->
+
+        <!-- Don’t keep it alive continuously—only run upon events -->
+        <key>RunAtLoad</key>
+        <false />
+        <key>KeepAlive</key>
+        <false />
+    </dict>
+</plist>
